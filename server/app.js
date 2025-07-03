@@ -10,20 +10,6 @@ app.use(cors());
 app.use(express.json());
 dbConnection();
 
-// app.post("/create-defaults", async (req, res) => {
-//   try {
-//     const defaults = [
-//       { name: "fan", state: "off", lastUpdated: new Date() },
-//       { name: "light", state: "off", lastUpdated: new Date() },
-//     ];
-
-//     await ApplianceModel.insertMany(defaults);
-//     res.json({ message: "Defaults inserted" });
-//   } catch (error) {
-//     res.status(500).json({ message: error.message });
-//   }
-// });
-
 // Add this to your backend
 app.get("/control", async (req, res) => {
   try {
