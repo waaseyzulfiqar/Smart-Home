@@ -23,7 +23,6 @@ const App = () => {
       try {
         if (showLoading) setIsLoading(true);
         const response = await apiClient.get("/");
-
         if (response.data?.appliances) {
           setData(response.data.appliances);
           setLastUpdate(new Date());

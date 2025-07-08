@@ -51,7 +51,7 @@ app.post("/update/:id", async (req, res) => {
       updated,
     });
   } catch (error) {
-    response.json({
+    res.json({
       message: error.message || "something went wrong",
       status: false,
     });
